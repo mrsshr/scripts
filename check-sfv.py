@@ -19,6 +19,12 @@ def main(args):
         fail = 0
 
         for line in sfv_content.splitlines():
+            line = line.strip()
+            if len(line) == 0:
+                continue
+            if line.startswith(';'):
+                continue
+
             try:
                 total += 1
 
